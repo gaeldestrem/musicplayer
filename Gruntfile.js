@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         linux64: true
       },
       src: './_public/**/*'
-    },
+    }
   });
 
   grunt.loadNpmTasks('grunt-node-webkit-builder');

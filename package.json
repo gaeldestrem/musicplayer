@@ -1,12 +1,12 @@
 {
-  "author": "Maximilian Stroh",
-  "name": "node-webkit-hipster-seed",
-  "description": "Bootstrap a crossplatform Desktop Application using tools you probably never heard of.",
-  "version": "0.0.2",
-  "homepage": "https://github.com/Anonyfox/node-webkit-hipster-seed",
+  "author": "Gaël Destrem",
+  "name": "musicplayer",
+  "description": "Music player based on node webkit",
+  "version": "0.0.1",
+  "homepage": "https://github.com/gaeldestrem/musicplayer.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Anonyfox/node-webkit-hipster-seed"
+    "url": "https://github.com/gaeldestrem/musicplayer.git"
   },
   "scripts": {
     "compiler": "brunch watch -P",
@@ -34,6 +34,7 @@
     "grunt": "~0.4.2",
     "grunt-node-webkit-builder": "~0.1.14",
     "nodewebkit": "~0.8.4-2",
-    "grunt-cli": "~0.1.11"
+    "grunt-cli": "~0.1.11",
+    "readdirp": "*"
   }
 }

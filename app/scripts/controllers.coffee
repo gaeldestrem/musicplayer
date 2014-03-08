@@ -4,6 +4,8 @@
 
 angular.module('app.controllers', [])
 
+
+
 .controller('AppCtrl', [
   '$scope'
   '$location'
@@ -11,7 +13,6 @@ angular.module('app.controllers', [])
   '$rootScope'
 
 ($scope, $location, $resource, $rootScope) ->
-
   # Uses the url to determine if the selected
   # menu item should have the class active.
   $scope.$location = $location
@@ -34,19 +35,26 @@ angular.module('app.controllers', [])
       return ''
 ])
 
-.controller('MyCtrl1', [
-  '$scope'
+.controller('MusicNavList', [
+  '$scope', 'myaudio', 'filemanager'
 
-($scope) ->
-  $scope.onePlusOne = 2
+($scope, audio, filemanager) ->
+  $scope.selectedElement = {name:"plop", datapath:'/home/gdestrem/test.ogg'}
+  $scope.list = [
+    {name:"plop", datapath:'/home/gdestrem/test.ogg'},
+    {name:"plop2", datapath:'something'},
+    {name:"plop3", datapath:'something'}
+  ]
+
+  $scope.onElementListClick = (element) ->
+    $scope.selectedElement = element;
+    console.log($scope.selectedElement)
+    console.log(audio)
+#    console.log(filemanager.walk())
+    audio.play(element.datapath)
+    audio.read(element.datapath)
 ])
 
-.controller('MyCtrl2', [
-  '$scope'
-
-($scope) ->
-  $scope
-])
 
 .controller('TodoCtrl', [
   '$scope'

@@ -1,7 +1,7 @@
 {
-  "author": "My Name",
-  "name": "MyAwesomeApp",
-  "description": "Package Description",
+  "author": "Gaël Destrem",
+  "name": "Music Player",
+  "description": "Music Player",
   "version": "0.0.1",
   "homepage": "",
   "private": true,
@@ -22,9 +22,9 @@
     "frame": true,
     "position": "center",
     "width": 1024,
-    "height": 768,
-    "min_width": 1024,
-    "min_height": 768,
+    "height": 600,
+    "min_width": 500,
+    "min_height": 600,
     "resizable": true,
     "always-on-top": false,
     "fullscreen": false
