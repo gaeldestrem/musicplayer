@@ -1,0 +1,15 @@
+div(ng-controller='LocalMedias')
+
+    h2 ZikList
+    div
+    table.table.table-hover
+        tr(ng-repeat='media in medias')
+                        td(ng-click='onElementListClick(media)') {{media.name}}
+
+
+
+
+
+
+
+

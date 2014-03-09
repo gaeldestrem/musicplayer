@@ -13,24 +13,22 @@ head
     script(src='js/app.js')
   body(ng-controller='AppCtrl')
     #wrapper
-      nav.navbar.navbar-inverse.navbar-fixed-top(ng-include='"/partials/navigation.html"', role='navigation')
-      #page-wrapper
-        .row
-          .col-lg-12
-            h1
-              | Zik
-            ol.breadcrumb
-              li
-                a(href='index.html')
-                  i.icon-dashboard
-                  | Dashboard
-              li.active
-                i.icon-file-alt
-                | Zik
+        nav.navbar.navbar-inverse.navbar-fixed-top(ng-include='"/partials/navigation.html"', role='navigation')
+        #page-wrapper
+            .row
+              .col-lg-12
+                h1
+                  | Zik
+
+                div(ng-include='"/partials/local-medias.html"')
+                div(ng-include='"/partials/content-mock.html"')
+
+        #player
+            .row
+              .col-lg-12
+                audio-player
 
 
 
 
-            div(ng-include='"/partials/zik.html"')
-            p(ng-include='"/partials/content-mock.html"')
 

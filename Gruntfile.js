@@ -6,9 +6,9 @@ module.exports = function(grunt) {
         version: "0.8.3",
         build_dir: './dist',
         // specifiy what to build
-        mac: true,
-        win: true,
-        linux32: true,
+        mac: false,
+        win: false,
+        linux32: false,
         linux64: true
       },
       src: './_public/**/*'

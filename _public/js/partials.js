@@ -21,44 +21,27 @@ angular.module('partials', [])
 '</div>',''].join("\n"));
 }])
 .run(['$templateCache', function($templateCache) {
-  return $templateCache.put('/partials/oldnav.html', [
+  return $templateCache.put('/partials/local-medias.html', [
 '',
-'<li><a href="charts.html"><i class="fa fa-bar-chart-o"></i>Charts</a></li>',
-'<li><a href="tables.html"><i class="fa fa-table"></i>Tables</a></li>',
-'<li><a href="forms.html"><i class="fa fa-edit"></i>Forms</a></li>',
-'<li><a href="typography.html"><i class="fa fa-font"></i>Typography</a></li>',
-'<li><a href="bootstrap-elements.html"><i class="fa fa-desktop"></i>Bootstrap Elements</a></li>',
-'<li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i>Bootstrap Grid</a></li>',
-'<li class="active"><a href="blank-page.html"><i class="fa fa-file"></i>Blank Page</a></li>',
-'<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-caret-square-o-down"></i>Dropdown<b class="caret"></b></a>',
-'  <ul class="dropdown-menu">',
-'    <li><a href="#">Dropdown Item</a></li>',
-'    <li><a href="#">Another Item</a></li>',
-'    <li><a href="#">Third Item</a></li>',
-'    <li><a href="#">Last Item</a></li>',
-'  </ul>',
-'</li>',''].join("\n"));
+'<div ng-controller="LocalMedias">',
+'  <h2>ZikList</h2>',
+'  <div></div>',
+'  <table class="table table-hover">',
+'    <tr ng-repeat="media in medias">',
+'      <td ng-click="onElementListClick(media)">{{media.name}}</td>',
+'    </tr>',
+'  </table>',
+'</div>',''].join("\n"));
 }])
 .run(['$templateCache', function($templateCache) {
-  return $templateCache.put('/partials/zik.html', [
+  return $templateCache.put('/partials/player.html', [
 '',
-'<div ng-controller="MusicNavList">',
-'  <ul>',
-'    <h2>ZikList</h2>',
-'    <div>',
-'      <ul>',
-'        <li ng-repeat="music in list"><span ng-click="onElementListClick(music)">{{music.name}}</span></li>',
-'      </ul>',
-'    </div>',
-'  </ul>',
-'  <div>',
-'    <div class="h2">Zik!',
-'      <div>{{selectedElement.name}}',
-'        <audio>',
-'          <source>',
-'        </audio>',
-'      </div>',
-'    </div>',
-'  </div>',
+'<div class="time">',
+'  <input min="0" max="{{audio.duration}}" step="0.01" type="range" ng-model="audio.currentTime">',
+'</div>',
+'<div class="form-group">',
+'  <button ng-disabled="currentNum == 0" ng-click="prev()" class="btn btn-default prev"><i class="glyphicon glyphicon-step-backward"></i>prev</button>',
+'  <button ng-click="playpause()" ng-class="{paused:audio.paused}" class="btn btn-default playpause"><span class="play-text"><i class="glyphicon glyphicon-play"></i>play</span><span class="pause-text"><i class="glyphicon glyphicon-pause"></i>pause</span></button>',
+'  <button ng-disabled="currentNum == 0" ng-click="next()" class="btn btn-default prev"><i class="glyphicon glyphicon-step-forward"></i>next</button>',
 '</div>',''].join("\n"));
 }]);

@@ -1,0 +1,18 @@
+.time
+    input(min='0', max='{{audio.duration}}', step='0.01', type='range', ng-model='audio.currentTime')
+
+.form-group
+      button.btn.btn-default.prev(ng-disabled='currentNum == 0', ng-click='prev()')
+        i.glyphicon.glyphicon-step-backward
+        | prev
+      button.btn.btn-default.playpause(ng-click='playpause()', ng-class='{paused:audio.paused}')
+        span.play-text
+          i.glyphicon.glyphicon-play
+          | play
+        span.pause-text
+          i.glyphicon.glyphicon-pause
+          | pause
+      button.btn.btn-default.prev(ng-disabled='currentNum == 0', ng-click='next()')
+        i.glyphicon.glyphicon-step-forward
+        | next
+
